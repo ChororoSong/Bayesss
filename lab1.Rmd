@@ -15,6 +15,9 @@ result<-lm(Ozone~Wind, data=airquality)
 
 ```{r}
 newtable<-xtable(summary(result))
+plot(airquality$Wind, airquality$Ozone)
+abline(result)
 print(newtable,type="html", file="table.html")
+
 ```
 
